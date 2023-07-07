@@ -1,0 +1,42 @@
+1. Quanto tempo levou? (time ./fastcoll -o arquivo1 arquivo2)
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 5
+Milliseconds      : 512
+Ticks             : 55125727
+TotalDays         : 6,38029247685185E-05
+TotalHours        : 0,00153127019444444
+TotalMinutes      : 0,0918762116666667
+TotalSeconds      : 5,5125727
+TotalMilliseconds : 5512,5727
+
+2. Quais são seus arquivos? Para obter um despejo hexadecimal, execute xxd -p arquivo1 e xxd -p arquivo2.
+
+arquivo1 = 50726f6a65746f2064652070726f6772616d6163616f2033206469736369
+706c696e612064652063696265727365677572616e636100000000000000
+00000000a621e910909d61108b0d41c48ddc3204522c62e0add091923e26
+7ceae938a1333addaedacc53301a07c25033ecab2d8c0091644c42c16ccf
+a2f7796344d88b12b38f13cc3cd3353456589713e996c72b3b36873572f2
+323c0eada7e5cfdd41eeadbffec010533d258617112a9104097ed1202933
+9dd6d3e7c7efa0d24a2f4825
+
+arquivo2 = 50726f6a65746f2064652070726f6772616d6163616f2033206469736369
+706c696e612064652063696265727365677572616e636100000000000000
+00000000a621e910909d61108b0d41c48ddc3204522c6260add091923e26
+7ceae938a1333addaedacc53301a07c25033ec2b2e8c0091644c42c16ccf
+a2f779e344d88b12b38f13cc3cd3353456589713e996c72b3b3687b572f2
+323c0eada7e5cfdd41eeadbffec010533d258617112a9184087ed1202933
+9dd6d3e7c7efa0524a2f4825
+
+
+3. Quais são seus hashes MD5? Verifique se são iguais. openssl dgst -md5 arquivo1 arquivo2
+
+MD5(arquivo1)= 580d1785f7285a8bacb3be2be4b10295
+MD5(arquivo2)= 580d1785f7285a8bacb3be2be4b10295
+
+4. Quais são seus hashes SHA-256? Verifique se são diferentes. openssl dgst -sha256 arquivo1 arquivo2
+
+SHA256(arquivo1)= b2c5f99ad796ffdb6da1a36fceddda0f2439112ef15c153201a4c0259ece6a06
+SHA256(arquivo2)= 6a486825801e114b3ca1776fdce69f12cf5d72b20826f047c1d42fbefce2d6fd
